@@ -1,0 +1,19 @@
+# One of 'breaking', 'deprecation', 'new_component', 'enhancement', 'bug_fix'
+change_type: enhancement
+
+# The name of the component, e.g. receiver/prometheus, exporter/otlp, ...
+component: receiver/apache
+
+# A brief description of the change. Surround your text with quotes ("...") if it needs to start with a backtick (`)
+description: Enable metric reaggregation for the Apache receiver to allow customizing metric attributes via the `metric_attributes` configuration option.
+
+# One or more tracking issues related to the change
+issues: [46375]
+
+# (Optional) One or more lines of additional information to render under the primary note.
+# These lines will be padded with 2 spaces and then inserted directly into the changelog.
+# Use pipe (|) for multiline entries.
+notes: |
+  Enables the `resource_attributes` configuration for the Apache receiver,
+  allowing users to enable or disable specific resource attributes on the metrics
+  produced by this receiver.
