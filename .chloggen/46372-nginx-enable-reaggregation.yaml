@@ -1,0 +1,19 @@
+# One of 'breaking', 'deprecation', 'new_component', 'enhancement', 'bug_fix'
+change_type: enhancement
+
+# The name of the component, e.g. receiver/prometheusreceiver
+component: receiver/nginx
+
+# A brief description of the change. Surround your text with quotes ("...") if it needs to start with a backtick (`)
+description: Enable reaggregation for nginx receiver metrics to support multi-dimensional aggregation
+
+# One or more tracking issues related to the change
+issues: [46372]
+
+# (Optional) One or more lines of additional information to render under the primary note.
+# These lines will be padded with 2 spaces and then inserted directly into the changelog.
+# Use pipe (|) for multiline entries.
+notes: |
+  Enables the `initial_cumulative_monotonic_value` reaggregation setting for nginx receiver metrics.
+  This allows users to configure how cumulative monotonic metrics are handled when the receiver
+  restarts or when multiple nginx instances report the same metric.
