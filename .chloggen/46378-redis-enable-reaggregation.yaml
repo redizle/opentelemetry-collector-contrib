@@ -1,0 +1,20 @@
+# One of 'breaking', 'deprecation', 'new_component', 'enhancement', 'bug_fix'
+change_type: enhancement
+
+# The name of the component, e.g. receiver/prometheus, exporter/elasticsearch
+component: receiver/redis
+
+# A brief description of the change. Surround your text with quotes ("...") if it needs to start with a backtick (``).
+change_description: Enable metric reaggregation for Redis receiver
+
+# One or more tracking issues related to the change
+issues: [46378]
+
+# (Optional) One or more lines of additional information to render under the primary note.
+# These lines will be padded with 2 spaces and then inserted directly into the changelog.
+# Use pipe (|) for multiline entries.
+note: |
+  Enables reaggregation support in the Redis receiver so that metrics with
+  different attribute sets can be combined. This allows users to aggregate
+  Redis metrics across multiple instances or configurations without
+  duplication or data loss.
