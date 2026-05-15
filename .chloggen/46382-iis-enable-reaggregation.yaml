@@ -1,0 +1,19 @@
+# One of 'breaking', 'deprecation', 'new_component', 'enhancement', 'bug_fix'
+change_type: enhancement
+
+# The name of the component, e.g. receiver/prometheus
+component: receiver/iis
+
+# A brief description of the change. Surround your text with quotes ("...") if it needs to start with a backtick (`)
+description: Enable re-aggregation of IIS metrics by adding `MetricsBuilderConfig` to the receiver configuration.
+
+# One or more tracking issues related to the change
+issues: [46382]
+
+# (Optional) One or more lines of additional information to render under the primary note.
+# These lines will be padded with 2 spaces and then inserted directly into the changelog.
+# Use pipe (|) for multiline entries.
+notes: |
+  This change enables the `MetricsBuilderConfig` in the IIS receiver, allowing users to
+  configure re-aggregation of metrics. This is consistent with changes made to other
+  receivers such as nginx, apache, redis, couchdb, memcached, and nsxt.
